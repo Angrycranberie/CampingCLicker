@@ -1,0 +1,16 @@
+CREATE TABLE SavedGames 
+(
+    code VARCHAR(6) PRIMARY KEY NOT NULL,
+    score INT,
+    clickLvl INT,
+    autoGLvl INT
+);
+
+CREATE TABLE tree 
+(
+    code VARCHAR(6),
+    x INT,
+    y INT,
+    type INT,
+    FOREIGN KEY (code) REFERENCES savedgames (code) 
+)
